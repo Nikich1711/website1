@@ -9,7 +9,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 5%;
-    background-image: linear-gradient(rgba(0, 26, 51, 0),rgba(0, 26, 51, 0)), url(images/background.jpg) ;
+    background-image: linear-gradient(rgba(0, 26, 51, 0),rgba(0, 26, 51, 0)), url(images/car.jpg) ;
     background-position: center;
     background-size: cover;
     display: flex;

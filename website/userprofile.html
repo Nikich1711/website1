@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="userprofile.css">
+</head>
+<body>
+	<div class="container">
+		<div class="profile">
+			<div class="profile-image">
+				<img src="default-profile.png" alt="Profile Picture" id="profile-image">
+				<label for="profile-pic" class="change-profile">
+					<i class="fas fa-camera"></i> Change Picture
+				</label>
+				<input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+			</div>
+			<h1>User Profile Page</h1>
+			<form>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" value="user@example.com" required>
+
+				<label for="firstname">First Name:</label>
+				<input type="text" id="firstname" name="firstname" value="John" required>
+
+				<label for="lastname">Last Name:</label>
+				<input type="text" id="lastname" name="lastname" value="Doe" required>
+
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+
+				<button type="submit" class="update-profile">Update Profile</button>
+				<button class="home-btn"><i class="fas fa-home"></i> Home</button>
+			</form>
+		</div>
+	</div>
+	<script src="userprofile.js"></script>
+</body>
+</html>

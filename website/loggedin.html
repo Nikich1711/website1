@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphic Gazari</title>
-    <link rel = "stylesheet" href="search.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="navbarloggedin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <script>
@@ -23,89 +23,71 @@
         
     });
     const toggleButton = document.getElementsByClassName('toggle')[0];
-const navbarLinks = document.getElementsByClassName('menu')[0];
-const imagesDropdown = document.getElementById('images-dropdown');
+    const navbarLinks = document.getElementsByClassName('menu')[0];
+    const imagesDropdown = document.getElementById('images-dropdown');
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
-});
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
 
-imagesDropdown.addEventListener('click', () => {
-  imagesDropdown.classList.toggle('active');
-});
+    imagesDropdown.addEventListener('click', () => {
+      imagesDropdown.classList.toggle('active');
+    });
 
-let subMenu = document.getElementById("subMenu");
+    let subMenu = document.getElementById("subMenu");
 
-function toggleMenu(){
-  document.getElementById("subMenu").classList.toggle("open-menu");
-}
-
-
-
+    function toggleMenu(){
+      document.getElementById("subMenu").classList.toggle("open-menu");
+    }
     </script>
 </head>
 <body>
-   <img src="images/logo.png" class="LOGO">
    <nav>
     <ul class="menu">
-      <li class="item dropdown">
-        <button class="dropbtn">Images</button>
-        <div class="dropdown-content">
-          <a href="#">Photos</a>
-          <a href="#">AI Generated</a>
-          <a href="#">Categories</a>
-        </div>
-      </li>
-      <li class="item"><a href="#">Home</a></li>
+      <img src="images/logo.png" class="LOGO">
+      <li class="item"><a href="ImageGallery.html">images</a></li>
+      <li class="item"><a href="loggedin.html">Home</a></li>
       <li class="toggle"><span class="bars"></span></li>
-      <li class="item button secondary"><a href="cart.html">Cart</a></li>
-      <li class="hero"><img src="images/user-profile.png" class="user-pic" onclick="toggleMenu()">
-      </li>
-      
+      <li class="item button secondary"><a href="Order.html">Order</a></li>
+      <li class="hero"><img src="images/user-profile.png" class="user-pic" onclick="toggleMenu()"></li>
       <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-      <div class="user-info">
-        <div class="images/user-profile">
-          <h2>Ivailo Venelinov</h2>
-        
+        <div class="sub-menu">
+          <div class="user-info">
+            <div class="images/user-profile">
+              <h2>Ivailo Venelinov</h2>
 
-        <a href="#" class="sub-menu-link">
-          <img src="images/profile.png">
-          <p>Edit profile</p>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="images/setting.png">
-          <p>Settings & Privacy</p>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="images/help.png">
-          <p>Help & Support</p>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="images/logout.png">
-          <p>Logout</p>
-        </a>
+              <a href="userprofile.html" class="sub-menu-link">
+                <img src="images/profile.png">
+                <p>Edit profile</p>
+              </a>
+              <a href="usersettings" class="sub-menu-link">
+                <img src="images/setting.png">
+                <p>Settings & Privacy</p>
+              </a>
+              <a href="userhelp" class="sub-menu-link">
+                <img src="images/help.png">
+                <p>Help & Support</p>
+              </a>
+              <a href="site.html" class="sub-menu-link">
+                <img src="images/logout.png">
+                <p>Logout</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </ul>
   </nav>
 
-<main>
- </main>
+  <div class="container">
+    <form action="" class="search-bar">
+      <input type="text" placeholder="search" name="q">
+      <button type="submit"><img src="images/search.png"></button>
+    </form>
+  </div>
 
-<div class="container">
-     <form action="" class="search-bar">
-     <input type="text" placeholder="search" name="q">
-     <button type="submit"><img src="images/search.png"></button>
-
-     </form>
-
-
-</div>
-
+  <main>
+  </main>
 
 </body>
-<form>
-  </form>
 </html>

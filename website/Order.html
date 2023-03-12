@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Page</title>
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="navbarloggedin.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+    $(function(){
+       $(".toggle").on("click", function(){
+
+        if($(".item").hasClass("active")){
+           $(".item").removeClass("active");
+        }
+        else{
+            $(".item").addClass("active");
+        }
+       })
+        
+    });
+    const toggleButton = document.getElementsByClassName('toggle')[0];
+    const navbarLinks = document.getElementsByClassName('menu')[0];
+    const imagesDropdown = document.getElementById('images-dropdown');
+
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+
+    imagesDropdown.addEventListener('click', () => {
+      imagesDropdown.classList.toggle('active');
+    });
+
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+      document.getElementById("subMenu").classList.toggle("open-menu");
+    }
+    </script>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <img src="images/logo.png" class="LOGO">
+      <li class="item dropdown">
+        <button class="dropbtn">Images</button>
+        <div class="dropdown-content">
+          <a href="#">Photos</a>
+          <a href="#">AI Generated</a>
+          <a href="#">Categories</a>
+        </div>
+      </li>
+      <li class="item"><a href="loggedin.html">Home</a></li>
+      <li class="toggle"><span class="bars"></span></li>
+      <li class="item button secondary"><a href="Order.html">Order</a></li>
+      <li class="hero"><img src="images/user-profile.png" class="user-pic" onclick="toggleMenu()"></li>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <div class="images/user-profile">
+              <h2>Ivailo Venelinov</h2>
+
+              <a href="userprofile.html" class="sub-menu-link">
+                <img src="images/profile.png">
+                <p>Edit profile</p>
+              </a>
+              <a href="usersettings" class="sub-menu-link">
+                <img src="images/setting.png">
+                <p>Settings & Privacy</p>
+              </a>
+              <a href="userhelp" class="sub-menu-link">
+                <img src="images/help.png">
+                <p>Help & Support</p>
+              </a>
+              <a href="site.html" class="sub-menu-link">
+                <img src="images/logout.png">
+                <p>Logout</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </nav>
+  <header>
+    <h1>Order Form</h1>
+  </header>
+
+  <main>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="picture-description">Picture Description:</label>
+        <textarea id="picture-description" name="picture-description" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Submit Order</button>
+      <a href="loggedin.html" class="home-button">Home</a>
+    </form>
+  </main>
+</body>
+</html>
+
